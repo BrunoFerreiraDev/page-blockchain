@@ -5,7 +5,6 @@ export const Content = styled.header`
   height: 20vh;
   align-items: center;
   justify-content: space-between;
-  margin: 0 32px;
   font-size: 1.5rem;
   background: linear-gradient(
     90deg,
@@ -24,12 +23,14 @@ export const Content = styled.header`
 export const BoxHeader = styled.div`
   display: flex;
   width: 100%;
-  align-items: center;
+  height: 90%;
 
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
   .logo {
-    height: 6.625rem;
+    height: 100%;
     width: 7.875rem;
-    margin-left: 4rem;
   }
 `;
 export const NavHeader = styled.nav`
@@ -38,6 +39,7 @@ export const NavHeader = styled.nav`
   align-items: center;
   justify-content: space-between;
   a {
+    padding: 0 0.5rem;
     &:hover {
       color: var(--white);
       font-weight: bold;
@@ -47,13 +49,4 @@ export const NavHeader = styled.nav`
       color: #eba417;
     }
   }
-`;
-
-export const Box = styled.div`
-  display: flex;
-  margin: 1.5rem 0rem;
-  width: 100vw;
-  height: 480px;
-
-  background: #fff;
 `;

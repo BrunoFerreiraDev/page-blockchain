@@ -1,2 +1,4 @@
 export * from "./ConectingDots";
 export * from "./Header";
+export * from "./Footer";
+export * from "./Sections";

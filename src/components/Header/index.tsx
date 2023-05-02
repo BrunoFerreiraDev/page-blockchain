@@ -19,20 +19,11 @@ const Header = () => {
       </BoxHeader>
       <NavHeader>
         <Link className={asPath === "/" ? "active" : ""} href="/">
-          Test
+          Home
         </Link>
-        <Link href="/Artigos" className={asPath === "/Artigos" ? "active" : ""}>
-          Test
-        </Link>
-        <Link
-          href="/studying"
-          className={asPath === "/studying" ? "active" : ""}
-        >
-          Test
-        </Link>
-        <Link href="/about" className={asPath === "/about" ? "active" : ""}>
-          Test
-        </Link>
+        <Link href="/">Test1</Link>
+        <Link href="/">Test2</Link>
+        <Link href="/">Test3</Link>
       </NavHeader>
       <BoxHeader></BoxHeader>
     </Content>

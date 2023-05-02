@@ -14,6 +14,7 @@ interface ConectingDotsInterface {
   strokeStyle: string;
   fillStyle: string;
   background: string;
+  numberOfStar: number;
 }
 
 const ConectingDots: React.FC<ConectingDotsInterface> = ({
@@ -21,18 +22,19 @@ const ConectingDots: React.FC<ConectingDotsInterface> = ({
   fillStyle,
   strokeStyle,
   background,
+  numberOfStar,
 }) => {
   if (typeof document !== "undefined") {
     const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas?.getContext("2d");
 
     if (canvas !== null && ctx !== null) {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-
+      console.log({ width: canvas.width, height: canvas.height });
       const stars: starsInterface[] = [], // Array that contains the stars
         FPS = 60, // Frames per second
-        x = 100, // Number of stars
+        x = numberOfStar, // Number of stars
         mouse = {
           x: 0,
           y: 0,
